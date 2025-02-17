@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        #saudacao {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+        }
+        #numero {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="saudacao">
+        <h1>Bem-vindo ao Dashboard!</h1>
+        {% if user.is_authenticated %}
+            <p>Você está logado como {{ user.username }}.</p>
+        {% else %}
+            <p>Você não está logado.</p>
+        {% endif %}
+    </div>
+
+    <div id="container">
+        <button onclick="gerarNumeroAleatorio()">Gerar Número Aleatório</button>
+        <div id="numero"></div>
+    </div>
+
+    <script>
+        function gerarNumeroAleatorio() {
+            var numero = Math.floor(Math.random() * 100) + 1;
+            document.getElementById('numero').innerText = numero;
+        }
+    </script>
+</body>
+</html>

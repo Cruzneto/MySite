@@ -1,0 +1,41 @@
+<!-- formulario.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Telefone</title>
+</head>
+<body>
+    <h2>Cadastro</h2>
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>{{ form.name.label_tag }}</td>
+                <td>{{ form.name }}</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td> <!-- Célula de espaço em branco -->
+            </tr>
+            <tr>
+                <td>{{ form.tel.label_tag }}</td>
+                <td>{{ form.tel }}</td>
+            </tr>
+            <tr>
+                <td></td> <!-- Célula de espaço em branco -->
+                <td><span>{{ form.tel.help_text }}</span></td> <!-- Renderize o help_text manualmente -->
+            </tr>
+            <tr>
+                <td>&nbsp;</td> <!-- Célula de espaço em branco -->
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">Enviar</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

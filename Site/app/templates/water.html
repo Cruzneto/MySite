@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Cadastros</title>
+</head>
+<body>
+    <h1>Lista de Cadastros</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Peso</th>
+                <th>Peso x .050 (Litros)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.age }}</td>
+                <td>{{ item.weight }}</td>   
+                <td>{{ item.quantidade_agua }}</td>  <!-- Adiciona a coluna com a quantidade de litros -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

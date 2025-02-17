@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio do Cruz Neto</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #00bfff, #000000); /* Degradê de azul claro para cáqui */
+            font-family: Arial, sans-serif; /* Tipo de fonte para o texto */
+        }
+        #rightbar {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #ffffff; /* Cor de fundo da barra lateral */
+            padding: 20px;
+            box-shadow: -4px 0 5px -2px rgba(0,0,0,0.2); /* Sombra para a barra lateral */
+        }
+        #rightbar button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        #welcome {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ greeting }}, Bem-vindo ao meu projeto!</h1>
+    <p> Caso encontre algum bug, favor reportar.</p>
+    <div id="rightbar">
+        <button onclick="window.location.href = '/formulario'">Formulário 1</button>
+        <button onclick="window.location.href = '/formulario2'">Formulário 2</button>
+        <button onclick="window.location.href = '/cadastros'">Lista</button>
+        <button onclick="window.location.href = '/parcelado'">Lista de Parcelados</button>
+        <button onclick="window.location.href = '/water'">Water</button>
+        <button onclick="window.location.href = '/wresult'">Water Result</button>
+        <button onclick="window.location.href = '/calculadora'">Calculadora Online</button>
+        <button onclick="window.location.href = '/conversor'">Conversor Dolar</button>
+        <button onclick="window.location.href = 'register/'">Cadastre-se</button>
+        <button onclick="window.location.href = 'login/'">Login</button>
+        <button onclick="window.location.href = 'dashboard/'">Logado</button>
+    </div>
+    <div id="welcome">
+        <h1>Bem vindo ao portfólio do Cruz Neto</h1>
+    </div>
+</body>
+</html>

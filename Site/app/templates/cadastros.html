@@ -1,0 +1,25 @@
+<!-- item_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item List</title>
+</head>
+<body>
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <h1>Lista de Itens</h1>
+    <ul>
+        {% for item in items %}
+            <li>{{ item.campo1 }} - {{ item.campo2 }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
